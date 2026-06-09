@@ -1,0 +1,135 @@
+{
+  "choi": {
+    "name": "최상빈",
+    "images": [
+      {
+        "file": "profile.png",
+        "role": "profile",
+        "bytes": 235458,
+        "src": "attachment:1f923cd7-f0b7-4fc4-88f4-c7f87032edb4:image.png"
+      },
+      {
+        "file": "ba1.png",
+        "role": "ba",
+        "bytes": 1165422,
+        "src": "attachment:4d86e017-b797-441f-8be2-3b65f1f274d1:image.png"
+      },
+      {
+        "file": "ba2.png",
+        "role": "ba",
+        "bytes": 650270,
+        "src": "attachment:349c8c1e-b8cd-48f7-b6a5-79314543693b:image.png"
+      }
+    ]
+  },
+  "cho": {
+    "name": "조민서",
+    "images": [
+      {
+        "file": "profile.png",
+        "role": "profile",
+        "bytes": 297068,
+        "src": "attachment:6cad689d-ec7b-42d7-bb3b-36ebd8dce1d1:image.png"
+      },
+      {
+        "file": "ba1.png",
+        "role": "ba",
+        "bytes": 2036151,
+        "src": "attachment:4c7c0f7d-fe33-47ab-8ab3-2077cfea5bcd:6ed75da8-5a0d-45f3-837d-2dda6b48fc3d.png"
+      },
+      {
+        "file": "ba2.png",
+        "role": "ba",
+        "bytes": 2400946,
+        "src": "attachment:82fac169-2b5c-4415-8515-de76e82275d1:c58a3360-43b2-4a17-9aad-79ad0e46ced3.png"
+      },
+      {
+        "file": "ba3.png",
+        "role": "ba",
+        "bytes": 1840974,
+        "src": "attachment:c031adb4-f930-40e1-84d5-88fa2a77ad5e:ada34ba0-3a0f-4ddd-885a-346c4bcebd07.png"
+      },
+      {
+        "file": "ba4.png",
+        "role": "ba",
+        "bytes": 1957169,
+        "src": "attachment:696de677-ba3d-40ce-b03b-7dd3a183dcbd:9abcd774-1b0d-4f23-bdf9-030c9bac6386.png"
+      },
+      {
+        "file": "ba5.jpg",
+        "role": "ba",
+        "bytes": 403202,
+        "src": "attachment:ac08e963-bad1-4e5e-898c-fa3234c28b8c:KakaoTalk_Photo_2026-02-03-18-23-49_001.jpeg"
+      },
+      {
+        "file": "ba6.jpg",
+        "role": "ba",
+        "bytes": 553292,
+        "src": "attachment:daf22990-1436-44ba-b694-914ea5a9a52a:KakaoTalk_Photo_2026-02-03-18-23-50_002.jpeg"
+      }
+    ]
+  },
+  "kim": {
+    "name": "김선준",
+    "images": [
+      {
+        "file": "profile.png",
+        "role": "profile",
+        "bytes": 341005,
+        "src": "attachment:14f1e3ed-e369-4fb9-b486-d0cad14965df:image.png"
+      },
+      {
+        "file": "ba1.png",
+        "role": "ba",
+        "bytes": 1545372,
+        "src": "attachment:de9da4f0-bd8c-408f-a682-19efb5835708:image.png"
+      },
+      {
+        "file": "ba2.png",
+        "role": "ba",
+        "bytes": 620738,
+        "src": "attachment:40b73736-4103-49f8-a52c-0e9587d9aca7:image.png"
+      }
+    ]
+  },
+  "son": {
+    "name": "손서빈",
+    "images": [
+      {
+        "file": "profile.png",
+        "role": "profile",
+        "bytes": 257902,
+        "src": "attachment:7d225bce-e10e-473f-b920-6b3350551dee:image.png"
+      },
+      {
+        "file": "ba1.png",
+        "role": "ba",
+        "bytes": 210348,
+        "src": "attachment:7b800492-7a86-4cba-bb7d-74446e569a07:image.png"
+      },
+      {
+        "file": "ba2.png",
+        "role": "ba",
+        "bytes": 312691,
+        "src": "attachment:a23ae1a9-67da-42b9-bc76-a4ec1dd42343:image.png"
+      }
+    ]
+  },
+  "han": {
+    "name": "한우진",
+    "images": [
+      {
+        "file": "profile.png",
+        "role": "profile",
+        "bytes": 396562,
+        "src": "attachment:e7e72e00-8e9d-4fcd-a099-a490ed6e532e:image.png"
+      },
+      {
+        "file": "ba1.png",
+        "role": "ba",
+        "bytes": 1139632,
+        "src": "attachment:57739774-7461-4504-9e54-bae1addb9c58:image.png"
+      }
+    ]
+  }
+}
