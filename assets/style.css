@@ -137,7 +137,7 @@ p.body:last-child{margin-bottom:0}
 .cta-wrap{display:flex;flex-direction:column;gap:10px;max-width:420px;margin:26px auto 0}
 .cta{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px;border-radius:999px;
   font-size:16px;font-weight:800;letter-spacing:.3px}
-.cta.insta{background:linear-gradient(135deg,#feda75,#d62976 35%,#962fbf 70%,#4f5bd5);color:#fff}
+.cta.naver{background:linear-gradient(135deg,#03c75a,#02a149);color:#fff}
 .cta.tel{background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#0a0a0a}
 .cta:active{transform:scale(.98)}
 .contact-info{text-align:center;color:var(--muted);font-size:14px;margin-top:18px;line-height:1.9}
@@ -148,7 +148,7 @@ p.body:last-child{margin-bottom:0}
   background:rgba(10,10,10,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   border-top:1px solid var(--line)}
 .sticky a{flex:1;text-align:center;padding:13px;border-radius:12px;font-size:14.5px;font-weight:800}
-.sticky .insta{background:linear-gradient(135deg,#d62976,#962fbf);color:#fff}
+.sticky .naver{background:linear-gradient(135deg,#03c75a,#02a149);color:#fff}
 .sticky .tel{background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#0a0a0a}
 body{padding-bottom:72px}
 

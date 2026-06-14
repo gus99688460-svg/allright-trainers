@@ -7,6 +7,9 @@ import json, os, html, glob
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 
+# 올라잇짐 네이버 플레이스 상담·예약(5인 공통)
+NAVER_URL = "https://map.naver.com/p/entry/place/2072429164?placePath=/ticket"
+
 def esc(s):
     return html.escape(str(s), quote=True)
 
@@ -129,13 +132,12 @@ def build(d):
     secs.append(section("promise", "🫱‍🫲", f'{d["nick"]}의 약속', promise))
 
     # CONTACT
-    insta = d["insta"]
     tel = d["phone"].replace(" ", "").replace("+82", "0").replace("-", "")
     contact = f'''<div class="cta-wrap">
-    <a class="cta insta" href="https://instagram.com/{esc(insta)}" target="_blank" rel="noopener">📷 인스타그램 DM 상담</a>
+    <a class="cta naver" href="{NAVER_URL}" target="_blank" rel="noopener">🟢 네이버 상담·예약</a>
     <a class="cta tel" href="tel:{esc(tel)}">📞 전화 상담 {esc(d["phone"])}</a>
   </div>
-  <p class="contact-info"><b>@{esc(insta)}</b><br>{esc(d["email"])}</p>'''
+  <p class="contact-info"><b>올라잇짐 네이버 예약</b><br>{esc(d["email"])}</p>'''
     secs.append(section("contact", "📩", "상담 문의", contact))
 
     closing = "\n".join(esc(c) for c in d["closing"])
@@ -150,7 +152,7 @@ def build(d):
 </footer>'''
 
     sticky = f'''<div class="sticky">
-  <a class="insta" href="https://instagram.com/{esc(insta)}" target="_blank" rel="noopener">📷 인스타 DM</a>
+  <a class="naver" href="{NAVER_URL}" target="_blank" rel="noopener">🟢 네이버 상담</a>
   <a class="tel" href="tel:{esc(tel)}">📞 전화 상담</a>
 </div>'''
 
