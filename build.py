@@ -185,23 +185,33 @@ def build(d):
     return out
 
 
-def build_hub(items, order):
+def hub_card(href, img, name_ko, nick, catch, main, external=False):
+    tgt = ' target="_blank" rel="noopener"' if external else ''
+    nick_html = f' <span>{esc(nick)}</span>' if nick and nick != name_ko else ''
+    go = "사이트 보기 →" if external else "자세히 보기 →"
+    return f'''<a class="tcard" href="{href}"{tgt}>
+    <img src="{img}" alt="{esc(name_ko)}" loading="lazy" />
+    <div class="tcard-b">
+      <h3>{esc(name_ko)}{nick_html}</h3>
+      <p class="tcatch">{esc(catch)}</p>
+      <p class="tmain">{esc(main)}</p>
+    </div>
+    <span class="tgo">{go}</span>
+  </a>'''
+
+
+def build_hub(items, order, externals=()):
     by = {d["slug"]: d for d in items}
     cards = ""
     for slug in order:
         d = by.get(slug)
         if not d:
             continue
-        catch = esc(" ".join(d["catch"]))
-        cards += f'''<a class="tcard" href="{slug}/">
-    <img src="{slug}/images/profile.jpg" alt="{esc(d["name_ko"])}" loading="lazy" />
-    <div class="tcard-b">
-      <h3>{esc(d["name_ko"])} <span>{esc(d["nick"])}</span></h3>
-      <p class="tcatch">{catch}</p>
-      <p class="tmain">{esc(d.get("main",""))}</p>
-    </div>
-    <span class="tgo">자세히 보기 →</span>
-  </a>'''
+        cards += hub_card(f"{slug}/", f"{slug}/images/profile.jpg",
+                          d["name_ko"], d["nick"], " ".join(d["catch"]), d.get("main", ""))
+    for e in externals:
+        cards += hub_card(e["href"], e["img"], e["name_ko"], e.get("nick", ""),
+                          e["catch"], e.get("main", ""), external=True)
     page = f'''<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -262,6 +272,6 @@ if __name__ == "__main__":
         items.append(d)
         out = build(d)
         print("built:", out)
-    # 허브 (표시 순서: 최상빈·조민서·김선준·손서빈·한우진)
-    hub = build_hub(items, ["choi", "cho", "kim", "son", "han"])
+    # 허브 (표시 순서: 최상빈·조민서·김선준·손서빈·한우진·조태현)
+    hub = build_hub(items, ["choi", "cho", "kim", "son", "han", "taehyun"])
     print("built:", hub)
