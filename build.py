@@ -188,7 +188,7 @@ def build(d):
 def hub_card(href, img, name_ko, nick, catch, main, external=False):
     tgt = ' target="_blank" rel="noopener"' if external else ''
     nick_html = f' <span>{esc(nick)}</span>' if nick and nick != name_ko else ''
-    go = "사이트 보기 →" if external else "자세히 보기 →"
+    go = "자세히 보기 →"
     return f'''<a class="tcard" href="{href}"{tgt}>
     <img src="{img}" alt="{esc(name_ko)}" loading="lazy" />
     <div class="tcard-b">
@@ -272,6 +272,15 @@ if __name__ == "__main__":
         items.append(d)
         out = build(d)
         print("built:", out)
-    # 허브 (표시 순서: 최상빈·조민서·김선준·손서빈·한우진·조태현)
-    hub = build_hub(items, ["choi", "cho", "kim", "son", "han", "taehyun"])
+    # 허브 (표시 순서: 최상빈·조민서·김선준·손서빈·한우진, 맨 아래 조태현)
+    # 조태현은 기존 사이트(taehyun-allright.co.kr)를 그대로 연결 — 카드 외형은 5인과 동일
+    externals = [{
+        "name_ko": "조태현",
+        "nick": "",
+        "catch": "내 몸에 맞는 운동을, 안 다치고 · 혼자서도 할 수 있게",
+        "main": "체형·자세 교정 · 다이어트 · 재활 트레이닝",
+        "href": "https://taehyun-allright.co.kr",
+        "img": "assets/taehyun.jpg",
+    }]
+    hub = build_hub(items, ["choi", "cho", "kim", "son", "han"], externals)
     print("built:", hub)
